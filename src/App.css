@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: black;
+  color: pink;
+  margin-top: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
+  font-family: "Ramaraja", serif;
+  font-family: "Spectral", serif;
+}
+
+header {
+  display: flex;
+}
+
+h1 {
+  margin-left: 14%;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  height: 30px;
+  margin-left: 30%;
+}
+
+.navbar {
+    display: flex;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 45px;
+    margin-left: 5%;
+    font-size: 18px;
+    color: purple;
+    font-family: "Ramaraja", serif;
+    font-family: "Spectral", serif;
+}
+
+.button {
+  display: inline-flex;
+}
+
+#button-background-color {
+  width: 150px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Ramaraja", serif;
+  font-family: "Spectral", serif;
+  padding-right: 4px;
+  padding-left: 4px;
+  margin-top: 45px;
+  margin-left: 40%;
+}
+
+#button-usuario {
+    width: 150px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: "Ramaraja", serif;
+  font-family: "Spectral", serif;
+  padding-right: 4px;
+  padding-left: 4px;
+  margin-top: 45px;
+  margin-left: 60%;
+}
+
+.hr {
+  color: pink;
+}
