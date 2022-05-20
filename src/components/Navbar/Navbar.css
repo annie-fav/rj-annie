@@ -1,0 +1,89 @@
+
+
+  
+  header {
+    display: flex;
+  }
+  
+  h1 {
+    margin-left: 10%;
+    font-style: italic;
+  }
+  
+  nav {
+    display: flex;
+    height: 30px;
+    margin-left: 8%;
+  }
+  
+  .navbar {
+      display: flex;
+      padding-right: 4px;
+      padding-left: 4px;
+      margin-top: 45px;
+      margin-left: 2%;
+      font-size: 18px;
+      color: purple;
+      font-family: "Ramaraja", serif;
+      font-family: "Spectral", serif;
+  }
+  
+  .button {
+    display: inline-flex;
+  }
+  
+  #button-background-color {
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: "Ramaraja", serif;
+    font-family: "Spectral", serif;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 45px;
+    margin-left: 40%;
+  }
+  
+  #button-usuario {
+      width: 150px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: "Ramaraja", serif;
+    font-family: "Spectral", serif;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 45px;
+    margin-left: 60%;
+  }
+  
+  
+  label {
+    color: purple ;
+    font-weight: bold;
+    margin-right: 4px;
+    margin-top: 4px;
+  }
+  
+  .search {
+    display: flex;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 50px;
+  }
+  
+  form {
+    display: flex;
+    width: 380px;
+    height: 24px;
+    margin-left:4px;
+    
+  }
+  
+  #clothes-option {
+    direction: inline-flex;
+    margin-left: 24px;
+  }
