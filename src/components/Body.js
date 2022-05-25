@@ -6,6 +6,7 @@ const Body = () => {
     return (
     
         <hr className="hr"/>
+        
     )
 }
 

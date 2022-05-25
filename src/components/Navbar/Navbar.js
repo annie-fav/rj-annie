@@ -1,4 +1,4 @@
-import { CartWidget } from "./CartWidget"
+import { CartWidget } from "../CartWidget"
 
 
 // Navbar 
@@ -12,9 +12,9 @@ const Navbar = () => {
         <h1>CoderHouse</h1>
 
         <nav>
-            <a className="navbar" href="">Home</a>
-            <a className="navbar" href="">Shop</a>
-            <a className="navbar" href="">Contact</a>
+            <a className="navbar" href="/home">Home</a>
+            <a className="navbar" href="/shop">Shop</a>
+            <a className="navbar" href="/contact">Contact</a>
 
             <div className="button">
                 <input type="submit" id="button-background-color" value="Background-Color" />
