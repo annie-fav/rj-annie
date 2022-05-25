@@ -24,7 +24,7 @@ function App() {
 
      <ItemListContainer greeting={'Welcome!'} /> 
      
-     <ItemCounter stock="10" initial="1" />
+     <ItemCounter stock={10} initial={1} />
 
      
      {/* <button onClick= {mostrarCounter}>Mostrar/Ocultar</button> */}

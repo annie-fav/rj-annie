@@ -1,40 +1,44 @@
 
 import { useState, useEffect } from "react"
 
-const ItemCounter = (stock, initial, onAdd) => {
+const ItemCounter = ({ stock = 10, initial = 1 }) => {
+    // props.stock
+    // props.iniital
+    const [contador, setContador] = useState(Number(initial))
 
-    const [contador, setContador] = useState(1) 
+    const increment = () => {
+        if (contador < stock) {
+            setContador(contador + 1)
+        }
+    }
 
-    const incrementar = () => {
-          setContador({
-            contador: contador.contador + 1,
-          })
-        } 
-          
-        const decrecer = () => {
-            setContador({
-              contador: contador.contador + 1,
-            })
-          } 
+    const decrement = () => {
+        if (contador >= 1) {
+            setContador(contador - 1)
+        }
+    }
 
     return (
-               <div onClick={ incrementar }>
-         <hr/> 
-                 <h2>Counter</h2>
-                
-                 <div className="div-count">
-                 <button className="button-count-increment" onClick={incrementar}>+</button> 
-                 <p className="p-button-count">{contador.contador}</p> 
-                 <button className="button-count-decrement" onClick={decrecer}>-</button> 
-                 </div>
+        <>
+            <hr />
+            <h2>Counter</h2>
 
-                 
-                 <br/>
-                 <br/>
-                 <hr/>
-               </div>
-           )
-        }
+            <div className="div-count">
+                <button className="button-count-decrement" onClick={decrement}>-</button>
+                <p className="p-button-count">{contador}</p>
+                <button className="button-count-increment" onClick={increment}>+</button>
+            </div>
+
+            {contador === stock && (
+                <p className="p-stock">Stock limit</p>
+            )}
+
+            <br />
+            <br />
+            <hr />
+        </>
+    )
+}
 
 
 export default ItemCounter
