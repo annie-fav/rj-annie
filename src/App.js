@@ -2,9 +2,10 @@ import './Components/Navbar/Navbar.css'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Body from './Components/Body'
-import { ItemListContainer } from './Components/ItemListcontainer/ItemListContainer'
-import Counter from './Ejemplos/Container/Counter/Counter'
+import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer'
+import ItemCounter from './Components/ItemListContainer/ItemCount/ItemCount'
 import { useState } from 'react'
+
 
 function App() {
 
@@ -23,11 +24,14 @@ function App() {
 
      <ItemListContainer greeting={'Welcome!'} /> 
      
-     <button onClick= {mostrarCounter}>Mostrar/Ocultar</button>
+     <ItemCounter stock="10" initial="1" />
 
-     {
+     
+     {/* <button onClick= {mostrarCounter}>Mostrar/Ocultar</button> */}
+
+     {/* {
        mostrar ?  <Counter/>  : <div></div>
-     }
+     } */}
 
       
     
