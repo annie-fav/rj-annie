@@ -23,9 +23,9 @@ const ItemCounter = (stock, initial, onAdd) => {
                  <h2>Counter</h2>
                 
                  <div className="div-count">
-                 <button className="button-count" onClick={incrementar}>+</button> 
-                 <p>{contador.contador}</p> 
-                 <button className="button-count" onClick={decrecer}>-</button> 
+                 <button className="button-count-increment" onClick={incrementar}>+</button> 
+                 <p className="p-button-count">{contador.contador}</p> 
+                 <button className="button-count-decrement" onClick={decrecer}>-</button> 
                  </div>
 
                  
