@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rj-annie/static/css/main.f6a1cfeb.css",
+    "main.js": "/rj-annie/static/js/main.1025cad9.js",
+    "static/js/787.6f981002.chunk.js": "/rj-annie/static/js/787.6f981002.chunk.js",
+    "index.html": "/rj-annie/index.html",
+    "main.f6a1cfeb.css.map": "/rj-annie/static/css/main.f6a1cfeb.css.map",
+    "main.1025cad9.js.map": "/rj-annie/static/js/main.1025cad9.js.map",
+    "787.6f981002.chunk.js.map": "/rj-annie/static/js/787.6f981002.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6a1cfeb.css",
+    "static/js/main.1025cad9.js"
+  ]
+}
