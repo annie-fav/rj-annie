@@ -51,10 +51,8 @@ export const ItemListContainer = (props) => {
             <p className="pWelcome">{ greeting }</p>
             {loading && (<div>Loading...</div>)}
             {!loading && (<div>
-                <div>Category: {categoryID}</div>
                 {items.length && <ItemList items={items} />}
             </div>)}
-            <hr/>
         </section>
     )
 }

@@ -33,7 +33,6 @@ const ItemCounter = ({ stock = 10, initial = 1 }) => {
 
             <br />
             <br />
-            <hr />
         </>
     )
 }

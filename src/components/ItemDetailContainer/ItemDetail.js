@@ -13,8 +13,8 @@ const ItemDetail = ({item}) => {
     return(
 
         <div>
+            <img className="card_img" src={item.img}/>
             <h2>{item.name}</h2>
-            <img src={item.img}/>
             <p>{item.price}</p>
             <button onClick={handleBack}>Back</button>
         </div>
