@@ -4,34 +4,27 @@ import Navbar from './Components/Navbar/Navbar'
 import Body from './Components/Body'
 import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer'
 import ItemCounter from './Components/ItemListContainer/ItemCount/ItemCount'
-// import { useState } from 'react'
-import ItemList from './Components/ItemList/ItemList'
+// import { PokeApi } from './Ejemplos/Container/PokeApi/PokeApi'
+// import ItemList from './Components/ItemList/ItemList'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 
 function App() {
 
-  // const [mostrar, setMostrar] = useState(true)
-
-  // // const mostrarCounter = () => {
-  // //   setMostrar(!mostrar)
-  // // }
 
   return (
-    <div className="App">
-    
-     <Navbar/>
-
-     <Body/>
-
-     <ItemListContainer greeting={'Welcome!'} /> 
-
-     <ItemList/>
-
-     <ItemCounter stock={10} initial={1} />
-      
-    
-    </div>
+    <>
+      <Navbar />
+      <Body />
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting={'Welcome!'} />} />
+        <Route path="/categorias/:categoryID" element={<ItemListContainer/>} />
+        <Route path="/itemcounter" element = { <ItemCounter stock={10} initial={1} /> } /> 
+      </Routes>
+    </>
   );
+
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import { CartWidget } from "../CartWidget"
-
+import { Link } from 'react-router-dom'
 
 // Navbar 
 
@@ -12,9 +12,11 @@ const Navbar = () => {
         <h1>CoderHouse</h1>
 
         <nav>
-            <a className="navbar" href="/home">Home</a>
-            <a className="navbar" href="/shop">Shop</a>
-            <a className="navbar" href="/contact">Contact</a>
+            <Link to="/" className="navbar"> Home </Link>
+            <Link to="/itemcounter" className="navbar" >Shop</Link>
+            <Link to="/category/T-Shirt" className="navbar">T-Shirt</Link>
+            
+
 
             <div className="button">
                 <input type="submit" id="button-background-color" value="Background-Color" />

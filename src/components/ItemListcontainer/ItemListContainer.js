@@ -1,39 +1,38 @@
+import { configure } from "@testing-library/react";
 import { useEffect, useState } from "react";
 import Productos from '../../Mock/data';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from "react-router-dom"
 
 
 export const ItemListContainer = (props) => {
+    const { greeting = 'Hiii' } = props;
 
-    const { greeting } = props;
-
-    const [ algo, setAlgo] = useState(false)
-    
-    const handleAlgo = () => {
-        setAlgo()
-    }
-
-    // Clase V
-
-    const [item, setItems] = useState([])
+    const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const { categoryID = 0 } = useParams();
+    console.log(categoryID);
     
-    const pedirDatos = (retornar) => {
-        
+    const pedirDatos = () => {
         return new Promise((resolve, reject) => {
             setTimeout( () => {
                 resolve(Productos)
 
-            }, 3000)
+            }, 2000)
         })
     }
 
     useEffect(() => {
+        setLoading(true)
 
     pedirDatos(true)
          .then((res) => {
-             setItems(res)
+             if (!categoryID) {
+                setItems(res)
+             } else {
+                 setItems(res.filter((item) => item.category === categoryID ))
+             }
          })
          .catch((error) => {
              console.log('ERRROR', error);
@@ -41,7 +40,7 @@ export const ItemListContainer = (props) => {
          .finally(() => {
             setLoading(false)
          })
-     }, [])
+     }, [categoryID])
 
 
 
@@ -50,13 +49,13 @@ export const ItemListContainer = (props) => {
     return (
         <section>
             <p className="pWelcome">{ greeting }</p>
+            {loading && (<div>Loading...</div>)}
+            {!loading && (<div>
+                <div>Category: {categoryID}</div>
+                {items.length && <ItemList items={items} />}
+            </div>)}
             <hr/>
-            
-
         </section>
-
-         
-
     )
 }
 

@@ -20,9 +20,7 @@ const ItemCounter = ({ stock = 10, initial = 1 }) => {
 
     return (
         <>
-            <hr />
-            <h2>Counter</h2>
-
+           
             <div className="div-count">
                 <button className="button-count-decrement" onClick={decrement}>-</button>
                 <p className="p-button-count">{contador}</p>

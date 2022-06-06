@@ -1,23 +1,24 @@
 import ItemCounter from "../ItemListContainer/ItemCount/ItemCount"
 import Productos from "../../Mock/data"
 
-const ItemList = ( {item} ) => {
+const ItemList = ({ items }) => {
 
-return (    
-    <div className="card">
-        {
-           item.map((item) => (
-             <div key={item.id}>
-             <h2>{item.name}</h2>
-             <img>src={"imageURL"}</img>
-             <h4>Price:{item.price}</h4>
-             <ItemCounter/>
-             </div>
-          ))    
+    return (
+        <div className="card">
+            {
+                items.map((product) => (
+                    <div key={product.id}>
+                        <h2>{product.name}</h2>
+                        <img alt="true" src={product.imageURL} />
+                        <h4>Price:{product.price}</h4>
+                        <ItemCounter />
+                    </div>
+                ))
 
-         }
-     </div> 
-        
-)}
- 
+            }
+        </div>
+
+    )
+}
+
 export default ItemList
